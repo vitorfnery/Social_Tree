@@ -3,7 +3,7 @@
 Social Tree is a project of a list of my contacts and social network connections (similar to [linktr.ee](https://linktr.ee/)). 
 The page contains my profile picture, primary and alternate email. It also has links to Discord, LinkedIn, GitHub, Instagram and others. The links use buttons and logo icons.
 Created using HTML5 and CSS.<br><br>
-It is available <a href="https://vitorfnery.github.io/social_tree_vitorfnery/" target="_blank">here</a>.
+It is available <a href="https://vitorfnery.github.io/Social_Tree//" target="_blank">here</a>.
 
 
 ## Techonologies
