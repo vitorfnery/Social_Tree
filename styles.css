@@ -5,15 +5,19 @@
 }
 
 :root {
-  --body-bg-color: #FAF7FD;
-  --purple: #BB99DD;
+  --body-bg-color: #faf7fd;
+  --purple: #bb99dd;
+}
+
+* ul {
+  list-style: none;
 }
 
 body {
   display: flex;
   background-color: var(--body-bg-color);
   color: var(--purple);
-  font-family: "Poppins";
+  font-family: "Poppins", sans-serif;
 
   display: flex;
   align-items: center;
@@ -50,6 +54,14 @@ body {
   justify-content: center;
 }
 
+.contains figure span {
+  transition: transform 0.3s;
+}
+
+.contains figure span:hover {
+  transform: scale(1.1);
+}
+
 .contains figure span img {
   width: 150px;
   height: 150px;
@@ -60,6 +72,16 @@ body {
 .contains figure figcaption {
   font-size: 1rem;
   margin: 20px 0 0;
+  transition: transform 0.3s;
+}
+
+.contains figure figcaption:hover {
+  transform: scale(1.1);
+}
+
+.contains figure figcaption a {
+  text-decoration: none;
+  color: var(--purple);
 }
 
 .contains .btns-link {
@@ -71,7 +93,7 @@ body {
   justify-content: space-between;
 }
 
-.contains .btns-link a {
+.contains .btns-link li {
   height: 49px;
   line-height: 49px;
   margin: 0 5px 16px;
@@ -83,6 +105,17 @@ body {
   text-decoration: none;
   color: var(--purple);
   font-weight: 600;
+  transition: transform 0.3s;
+}
+
+.contains .btns-link a {
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contains .btns-link li:hover {
+  transform: scale(1.1);
 }
 
 .contains .network {
@@ -94,7 +127,58 @@ body {
   justify-content: space-evenly;
 }
 
+.contains .network ul {
+  display: flex;
+  transition: transform 0.3s;
+}
+
+.contains .network ul li:hover {
+  transform: scale(1.1);
+}
+
 .contains .network img {
   width: 24px;
-  margin: 0 5px
+  margin: 0 5px;
+}
+
+/*animation*/
+
+figure {
+  animation: fromTop 0.7s 0.3s backwards;
+}
+
+main section {
+  animation: fromBottom 0.7s backwards;
+}
+
+main section:nth-child(2) {
+  animation-delay: 0.4;
+}
+
+main section:nth-child(3) {
+  animation-delay: 0.7s;
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
